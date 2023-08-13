@@ -18,11 +18,13 @@ public class InsuranceWSEndpoint {
      //private InsuranceService insuranceService;
 
     private InsuranceService insuranceService;
-
+    @Autowired
     public InsuranceWSEndpoint(InsuranceService insuranceService){
+
         this.insuranceService = insuranceService;
     }
 
+    //branch conclusion
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "InsuranceRequest")
     @ResponsePayload
