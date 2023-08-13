@@ -14,15 +14,17 @@ public class InsuranceWSEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.nicordesigns.com/spring-ws-insurance";
 
-     //@Autowired
-     //private InsuranceService insuranceService;
+     @Autowired
+     private InsuranceService insuranceService;
 
-    private InsuranceService insuranceService;
+//    private InsuranceService insuranceService;
+//    @Autowired
+//    public InsuranceWSEndpoint(InsuranceService insuranceService){
+//
+//        this.insuranceService = insuranceService;
+//    }
 
-    public InsuranceWSEndpoint(InsuranceService insuranceService){
-        this.insuranceService = insuranceService;
-    }
-
+//  from branch conclusion2
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "InsuranceRequest")
     @ResponsePayload
